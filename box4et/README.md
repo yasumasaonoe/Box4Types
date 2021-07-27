@@ -30,7 +30,7 @@ Sample command for training on UFET:
 ```bash
 # Select data from {ufet, onto, figer, bbn}
 export DATA_NAME=ufet
-export MODEL_ID=box_onto_test_training
+export MODEL_ID=box_ufet_0
 export TRAIN_DATA=ufet/ufet_train.json
 
 $ CUDA_VISIBLE_DEVICES=0 python3 -u main.py \
