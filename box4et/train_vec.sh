@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Select data from {ufet, onto, figer, bbn}
-export DATA_NAME=onto
-export MODEL_ID=vec_onto_test_training
+export DATA_NAME=ufet
+export MODEL_ID=vec_ufet_0
 
 if [[ $DATA_NAME == "ufet" ]]; then
     #export TRAIN_DATA=ufet/ufet_train.json

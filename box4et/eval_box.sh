@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Select data from {ufet, onto, figer, bbn}
-export DATA_NAME=bbn
+export DATA_NAME=ufet
 
 CUDA_VISIBLE_DEVICES=0 python3 -u main.py \
---model_id box_${DATA_NAME}_test \
+--model_id box_${DATA_NAME}_dev \
 --reload_model_name box_${DATA_NAME} \
 --load \
 --model_type bert-large-uncased-whole-word-masking \
@@ -20,4 +20,4 @@ CUDA_VISIBLE_DEVICES=0 python3 -u main.py \
 --box_dim=109 \
 --proj_layer highway \
 --per_gpu_eval_batch_size 8 \
---eval_data ${DATA_NAME}/${DATA_NAME}_test.json
+--eval_data ${DATA_NAME}/${DATA_NAME}_dev.json
