@@ -52,6 +52,7 @@ This code assumes 3 directories listed below. Paths to these directories are spe
 - `./data/ontology`: This directory contains type vocab files. 
 - `./model`: Trained models will be saved in this directory. When you run `main.py` with the test mode, the trained model is loaded from here.
 - Download model checkpoints (box and vector models for 4 datasets) from [here](https://drive.google.com/file/d/1K2rKHw3bzwp-aHM--zVtKH56Q8ilyAs-/view?usp=sharing) (NOTE: total size is around 30GB). 
+- UFET: We do not include the augmented UFET training set since it is derived from English Gigaword, which belongs to LDC. If you have a LDC membership and want to use the augmented data, please contact at <yasumasa@utexas.edu>.
 
 Run this to download these folders.
 ```bash
