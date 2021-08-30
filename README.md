@@ -23,9 +23,9 @@ $ git clone https://github.com/yasumasaonoe/Box4Types.git
 
 This code has been tested with Python 3.7 and the following dependencies:
 
-- `torch==1.6.0`
-- `transformers==3.0.2`
-- `wandb==0.10.12`
+- `torch==1.7.1` (Please install the right version of Pytorch depending on your CUDA version.)
+- `transformers==4.9.2`
+- `wandb==0.12.1`
 
 If you're using a conda environment, please use the following commands:
 
