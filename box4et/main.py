@@ -596,7 +596,7 @@ def _train(args: argparse.Namespace,
     os.makedirs(save_model_to, exist_ok=False)
   print("==> Trained models will be saved at {}".format(save_model_to))
   args.train_batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
-  args.eval_batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
+  args.eval_batch_size = args.per_gpu_eval_batch_size * max(1, args.n_gpu)
   print("==> Loading data generator... ")
   train_gen_list = get_all_datasets(args, model.transformer_tokenizer)
   print("==> Loading ID -> TYPE mapping... ")
@@ -880,7 +880,7 @@ def _test(args: argparse.Namespace,
     print("==> Create {}".format(save_output_to))
     os.makedirs(save_output_to, exist_ok=False)
   test_fname = args.eval_data
-  args.eval_batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
+  args.eval_batch_size = args.per_gpu_eval_batch_size * max(1, args.n_gpu)
   print("==> Loading data generator... ")
   data_gens = get_datasets([(test_fname, "test")],
                            args,
